@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+    transition: background-color 3s ease;
+}
+
+.cards_container {
+    display: flex;
+    width: 90vw;
+}
+
+.card_item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    transition: all 0.75s ease-in;
+    flex: 1;
+    border: 2px solid grey;
+}
+
+.card_item h3 {
+    margin: 0;
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    box-shadow: 2px 1px 4px 2px rgb(128, 133, 132);
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    background-color: rgb(48, 67, 56);
+}
+
+.card_01 {
+    background-image: url("./images/beach.jpg");
+}
+
+.card_02 {
+    background-image: url("./images/fjord.jpg");
+}
+
+.card_03 {
+    background-image: url("./images/forest.jpg");
+}
+
+.card_04 {
+    background-image: url("./images/mountain.jpg");
+}
+
+.card_05 {
+    background-image: url("./images/sea.jpg");
+}
+
+.card_item.active {
+    flex: 5;
+}
+
+.card_item h3 {
+    opacity: 0;
+}
+
+.card_item.active h3 {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
